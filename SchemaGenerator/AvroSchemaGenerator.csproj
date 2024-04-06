@@ -9,12 +9,12 @@
     <NeutralLanguage>en-US</NeutralLanguage>
     <PackageTags>Apache Avro, Avro Schema</PackageTags>
     <PackageIcon>avro-schema.png</PackageIcon>
-    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>   
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageIconUrl />
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
 
-  <ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
     <PackageReference Include="System.Text.Json" Version="8.0.0" />
   </ItemGroup>
@@ -29,5 +29,5 @@
       <PackagePath></PackagePath>
     </None>
   </ItemGroup>
-   
+
 </Project>
